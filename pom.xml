@@ -14,7 +14,7 @@
     </parent>
     <groupId>mprzymus</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.4</version>
     <name>pet-clinic</name>
     <description>sfg pet clinic</description>
 
@@ -41,7 +41,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/mprzymus/pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>pet-clinic-0.0.4</tag>
   </scm>
 
 </project>
