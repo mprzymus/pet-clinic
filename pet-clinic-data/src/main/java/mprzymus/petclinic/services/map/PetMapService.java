@@ -1,11 +1,11 @@
 package mprzymus.petclinic.services.map;
 
 import mprzymus.petclinic.model.Pet;
-import mprzymus.petclinic.services.CrudService;
+import mprzymus.petclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
