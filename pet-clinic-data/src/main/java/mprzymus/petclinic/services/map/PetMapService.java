@@ -34,4 +34,3 @@ public class PetMapService extends AbstractMapService<Pet, Long> implements PetS
         return super.save(object);
     }
 }
-
