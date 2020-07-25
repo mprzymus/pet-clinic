@@ -11,38 +11,38 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class VetSPJpaService implements VetService {
+public class VetSDJpaService implements VetService {
 
-    private final VetRepository vetRepository;
+    private final VetRepository repository;
 
-    public VetSPJpaService(VetRepository vetRepository) {
-        this.vetRepository = vetRepository;
+    public VetSDJpaService(VetRepository vetRepository) {
+        this.repository = vetRepository;
     }
 
     @Override
     public Set<Vet> findAll() {
         Set<Vet> vets = new HashSet<>();
-        vetRepository.findAll().forEach(vets::add);
+        repository.findAll().forEach(vets::add);
         return vets;
     }
 
     @Override
     public Vet findById(Long id) {
-        return vetRepository.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);
     }
 
     @Override
     public Vet save(Vet vet) {
-        return vetRepository.save(vet);
+        return repository.save(vet);
     }
 
     @Override
     public void delete(Vet vet) {
-        vetRepository.delete(vet);
+        repository.delete(vet);
     }
 
     @Override
     public void deleteById(Long id) {
-        vetRepository.deleteById(id);
+        repository.deleteById(id);
     }
 }

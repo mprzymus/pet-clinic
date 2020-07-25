@@ -1,15 +1,16 @@
 package mprzymus.petclinic.services.jpa;
 
 import mprzymus.petclinic.model.PetType;
-import mprzymus.petclinic.model.Vet;
 import mprzymus.petclinic.repositories.PetTypeRepository;
 import mprzymus.petclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
+@Profile("springdatajpa")
 public class PetTypeSDJpaService implements PetTypeService {
     private final PetTypeRepository petTypeRepository;
 
