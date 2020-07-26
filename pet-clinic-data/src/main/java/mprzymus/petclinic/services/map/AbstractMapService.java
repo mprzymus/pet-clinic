@@ -1,6 +1,7 @@
 package mprzymus.petclinic.services.map;
 
 import mprzymus.petclinic.model.BaseEntity;
+import org.springframework.context.annotation.Primary;
 
 import java.util.*;
 
