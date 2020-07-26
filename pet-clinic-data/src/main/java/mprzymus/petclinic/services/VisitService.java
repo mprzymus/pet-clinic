@@ -1,4 +1,4 @@
-package mprzymus.petclinic.services.map;
+package mprzymus.petclinic.services;
 
 import mprzymus.petclinic.model.Visit;
 import mprzymus.petclinic.services.CrudService;

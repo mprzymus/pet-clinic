@@ -1,6 +1,7 @@
 package mprzymus.petclinic.services.map;
 
 import mprzymus.petclinic.model.Visit;
+import mprzymus.petclinic.services.VisitService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
