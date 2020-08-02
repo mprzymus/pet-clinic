@@ -18,6 +18,7 @@ class OwnerMapServiceTest {
         ownerMapService.save(Owner.builder().id(ownerId).lastName(surname).build());
     }
 
+    //to test
     @Test
     void findAll() {
         var ownerSet = ownerMapService.findAll();
