@@ -62,6 +62,5 @@ class OwnerMapServiceTest {
         var smith = ownerMapService.findByLastName(surname);
         assertNotNull(smith);
         assertEquals(surname, smith.getLastName());
-        fail();
     }
 }
