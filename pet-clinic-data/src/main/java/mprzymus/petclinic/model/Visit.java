@@ -1,6 +1,9 @@
 package mprzymus.petclinic.model;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -8,10 +11,8 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "visits")
+@NoArgsConstructor
 public class Visit extends BaseEntity{
 
     @Column(name = "date")
@@ -23,4 +24,12 @@ public class Visit extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
+
+    @Builder
+    public Visit(Long id, LocalDate date, String description, Pet pet) {
+        super(id);
+        this.date = date;
+        this.description = description;
+        this.pet = pet;
+    }
 }
