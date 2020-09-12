@@ -5,9 +5,12 @@ import mprzymus.petclinic.model.Vet;
 import mprzymus.petclinic.services.VetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Comparator;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
@@ -26,5 +29,10 @@ public class VetController {
                 .collect(Collectors.toList());
         model.addAttribute("vets", sortedVets);
         return "vets/index";
+    }
+
+    @GetMapping("/api/vets")
+    public @ResponseBody Set<Vet> getVetsJson() {
+        return vetService.findAll();
     }
 }
